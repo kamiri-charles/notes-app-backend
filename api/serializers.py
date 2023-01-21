@@ -23,7 +23,6 @@ class UserSerializer(ModelSerializer):
         instance = get_user_model()(
             username=validated_data['username'],
             password=make_password(validated_data['password']),
-            email=validated_data['email'],
             is_staff=True,
             is_active=True
         )
