@@ -45,7 +45,7 @@ def note_create(req):
     return Response(serializer.data)
 
 
-@api_view(['UPDATE'])
+@api_view(['POST'])
 def note_update(req, pk):
 	note = Note.objects.get(id=pk)
 	serializer = NoteSerializer(instance=note, data=req.data)
