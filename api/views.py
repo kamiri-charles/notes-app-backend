@@ -1,9 +1,11 @@
+import json
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Note, User
 from .serializers import NoteSerializer, UserSerializer
 from django.contrib.auth import login, logout, authenticate
+
 
 # Create your views here.
 @api_view(['GET'])
@@ -40,7 +42,8 @@ def note_create(req):
     serializer = NoteSerializer(data=req.data)
 
     if serializer.is_valid():
-        serializer.save()
+        user = User.objects.get(id=req.data['user_id'])
+        serializer.save(owner=user)
 
     return Response(serializer.data)
 
