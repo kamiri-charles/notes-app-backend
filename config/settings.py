@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=^5gaq%#xh(px7h9tb=v(f%kbz8n__2psvn(u0-zqo83xv&hta'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 # Application definition
@@ -141,4 +141,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'localhost:3000',
+    'notes-app-api.azurewebsites.net'
+]
