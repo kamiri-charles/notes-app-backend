@@ -118,7 +118,8 @@ def user_sign_in(req):
 
     if user is not None:
         login(req, user)
-        return Response({'signed_in': True})
+        serializer = UserSerializer(user, many=False)
+        return Response(serializer.data)
 
     else:
         return Response({'err': 'The username or password entered is incorrect.\nThe username and password are case sensitive.'})
