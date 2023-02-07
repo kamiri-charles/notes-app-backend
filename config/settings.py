@@ -133,7 +133,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:8000',
     'https://notes-app-api.azurewebsites.net',
-    'https://kamiri-charles.github.io/notes-app'
+    'https://kamiri-charles.github.io'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
