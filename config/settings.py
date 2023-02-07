@@ -132,16 +132,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:8000',
+    'https://notes-app-api.azurewebsites.net'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000/',
     'http://localhost:8000/',
+    'https://notes-app-api.azurewebsites.net/'
+
 
 ]
 
 
 ALLOWED_HOSTS = [
-    'localhost:3000',
+    'localhost',
     'notes-app-api.azurewebsites.net'
 ]
